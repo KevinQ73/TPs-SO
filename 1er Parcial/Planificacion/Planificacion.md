@@ -2,6 +2,28 @@
 
 ## Índice
 - Definiciones varias
+- Tipos de planificadores
+    - Planificador de largo plazo
+    - Planificador de mediano plazo
+    - Planificador de corto plazo
+- Tipos de planificadores de Corto Plazo
+    - Criterios de replanificación
+    - Eventos de replanificación
+- Criterios de Algoritmos
+    - Orientados al usuario
+    - Orientados al sistema
+- Algoritmos para planificadores de corto plazo
+    - FIFO
+    - SJF/SRT (Shortest job first)/(Shortest remaining time first)
+        - SJF
+        - SRT
+        - SJR vs SJF
+        - Estimación de ráfaga
+    - Por Prioridades
+        - ¡Aging! 
+    - HRRN (Highest Response Ratio Next)
+    - Round Robin (RR)
+    - Virtual Round Robin
 
 ### Definiciones varias
 
