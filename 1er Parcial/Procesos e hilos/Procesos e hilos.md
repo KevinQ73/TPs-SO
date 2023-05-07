@@ -16,17 +16,9 @@ y el *proceso* es la activa
 
 Un proceso está compuesto por:  
 - **Text**: Es el código escrito y fijo del proceso.  
-- **Data**: Es aquella que envuelve a todas las variables  
-globales, de tamaño fijo.
-- **Heap**: En el *heap* se encuentra la memoria dinámica,  
-Una forma de hacer crecer al *heap* es a través de la función  
-*malloc()*, a la hora de pedir memoria.  
-- **Stack (o pila)**: Dentro de esta se encuentran las  
-variables locales, los retornos de funciones, y los  
-parámetros de funciones (que terminan siendo variables  
-locales). El *stack* es dinámico, de tamaño variable. El  
-famoso *stack overflow* se genera cuando la memoria dada a  
-dicha *stack* se supera, es decir, se queda sin memoria.
+- **Data**: Es aquella que envuelve a todas las variables globales, de tamaño fijo.
+- **Heap**: En el *heap* se encuentra la memoria dinámica, Una forma de hacer crecer al *heap* es a través de la función *malloc()*, a la hora de pedir memoria.  
+- **Stack (o pila)**: Dentro de esta se encuentran las variables locales, los retornos de funciones, y los parámetros de funciones (que terminan siendo variables locales). El *stack* es dinámico, de tamaño variable. El famoso *stack overflow* se genera cuando la memoria dada a dicha *stack* se supera, es decir, se queda sin memoria.
 
 ### PCB (Process Control Block)
 Posee la información necesaria para que el SO administre el proceso. Está asociada al proceso
