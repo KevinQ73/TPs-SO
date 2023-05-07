@@ -10,6 +10,14 @@
      - Planificadores
      - Cambio de contexto
         - ¿Que se puede dar en un cambio de contexto?
+  - **Hilos**
+    - ¿Que es un hilo?
+    - TCB
+    - Diferencias con procesos
+    - KLT - ULT
+        - KLT
+        - ULT
+    - Dinamica de estados
 
 ## Procesos
 Empecemos por lo más básico *¿Qué es un proceso?*. 
