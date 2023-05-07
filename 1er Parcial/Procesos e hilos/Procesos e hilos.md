@@ -6,6 +6,10 @@
 	 - Composición de un proceso
 	 - PCB
 	 - Estados de un proceso
+     - Swapping
+     - Planificadores
+     - Cambio de contexto
+        - ¿Que se puede dar en un cambio de contexto?
 
 ## Procesos
 Empecemos por lo más básico *¿Qué es un proceso?*. 
@@ -108,3 +112,10 @@ El cambio de contexto puede realizarse para:
 - Ejecutar una syscall
 
 > Overhead: El tiempo que dura un cambio de ocntexto es un gasto extra. Es necesario para poder ejecutar procesos pero durante el mismo, el sistema no hace ningún trabajo útil (para el usuario). Ese tiempo se denomina *OVERHEAD*
+
+#### ¿Que se puede dar en un cambio de contexto?
+
+- *Si hay un cambio de proceso* $=>$ Hay dos cambios de contexto (Se guarda el contexto de un proceso y se restaura el de otro)
+- *Si hay dos cambios de contexto* $=>$ **NO necesariamente** hay un cambio de proceso (Se puede elegir al mismo proceso, ejecutar una syscall, atender una syscall, atender una interrupción, etc)
+- *Si hay cambio de modo* $=>$ Hay un cambio de contexto (Y sí, sino para que corno cambie de modo ¿no?)
+- *Si hay un cambio de contexto* $=>$ **NO necesariamente** hay un cambio de modo, (Puede ocurrir una interrupción cuando ya estoy atendiendo una)
