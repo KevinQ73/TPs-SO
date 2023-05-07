@@ -119,3 +119,53 @@ El cambio de contexto puede realizarse para:
 - *Si hay dos cambios de contexto* $=>$ **NO necesariamente** hay un cambio de proceso (Se puede elegir al mismo proceso, ejecutar una syscall, atender una syscall, atender una interrupción, etc)
 - *Si hay cambio de modo* $=>$ Hay un cambio de contexto (Y sí, sino para que corno cambie de modo ¿no?)
 - *Si hay un cambio de contexto* $=>$ **NO necesariamente** hay un cambio de modo, (Puede ocurrir una interrupción cuando ya estoy atendiendo una)
+
+## Hilos
+
+### ¿Que es un hilo?
+
+> Es la mínima unidad de utilización de la CPU. Consiste en un juego de registros y un espacio de pila. Se lo conoce como proceso ligero
+
+- Comparte el código, los datos y los recursos con sus hilos pares.
+- Un proceso está formado por uno o más hilos de ejecución.
+- Cada hilo es administrado por un TCB, cuya referencia se encuentra en el PCB del proceso al que está asociado
+- Permiten paralelismo dentro de un proceso o aplicación.
+- Al compartir recursos, pueden comunicarse sin usar ningún mecanismo de comunicación inter-proceso del SO.
+- No hay protección entre hilos. Un hilo puede escribir en la pila de otro hilo del mismo proceso.
+
+**Los hilos no comparten ni sus registros ni sus stacks entre ellos**
+
+### TCB (Thread Control Block)
+
+Es lo mínimo que necesito para administrar los hilos
+
+### Diferencias con procesos
+
+- Permiten la comunicación privada entre varios hilos del mismo proceso, sin intervención del SO.
+- Mayor eficiencia en el cambio de un hilo a otro, que de un Proceso a otro, debido a que solo voy a tener que cambiar dos estructuras, los registros y la stack.
+- Mayor eficiencia en la creación de un hilo que en la creación de un Proceso Hijo, ya que solo voy a tener que crear dos estructuras, los registros y la stack.
+- Un Proceso Multihilo puede recuperarse de la “muerte” de un Hilo, pues conoce los efectos de esta, y toma su espacio de memoria (excepto para el hilo main).
+- Cuando un proceso “muere”, generalmente todos sus hilos también pues los recursos del proceso son tomados por el Sistema Operativo.
+
+### KLT - ULT
+
+#### KLT
+- Los KLTs son llamados “Hilos a nivel de Kernel” o "nativos".
+- El SO conoce de su existencia y controla su ejecución
+
+#### ULT
+- Los ULTs son llamados “Hilos a nivel de usuario” o "Green Threads". 
+- Su gestión es realizada por bibliotecas en modo usuario, y por lo tanto, el SO no sabe de la existencia de estos hilos.
+- Características:
+    - Realizan la conmutación de contexto aún más rápidamente.
+    - Cuando uno de ellos realiza una operación bloqueante (ej. E/S), sus hilos pares no pueden continuar.
+    - No permiten paralelismo entre hilos pares.
+
+### Dinamica de estados
+
+El estado del Proceso $P$ es la combinación de los estados de sus Hilos.
+- Cuando cualquiera de los Hilos está en estado “**Ejecutando**”, el estado de $P$ será “**Ejecutando**”.
+- Si ningún Hilo está en “**Ejecutando**”, si alguno está en “*Listo*”, el estado de $P$ será “*Listo*”.
+- El estado de $P$ es “Bloqueado” sólo si todos sus Hilos están en estado “Bloqueado”.
+
+Cuando yo creo hilos, no solo creo los TCBs sino que también los registros y la stack de cada hilo, ya que los TCBs tienen el PUNTERO a los registros y la stack. Al igual que el PCB, no crea dichas estructuras, sino que apunta a ellas.
