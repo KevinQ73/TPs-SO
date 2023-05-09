@@ -330,8 +330,8 @@ La respuesta es SÍ y son los monitores
     #include <thread.h>
     #include <synch.h>
 
-    static  int count;                     // the static counter
-    static  mutex_t MonitorLock;           // the static mutex lock
+    static int count;                     // the static counter
+    static mutex_t MonitorLock;           // the static mutex lock
 
     int INC(void)
     {
@@ -340,15 +340,15 @@ La respuesta es SÍ y son los monitores
         mutex_lock(&MonitorLock);          // lock the monitor
             value = (++count);             // increase and save counter
         mutex_unlock(&MonitorLock);        // release the monitor
-        return  value;                     // return the new value
+        return value;                      // return the new value
     }
 
     int GET(void)
     {
-        int  value;
+        int value;
 
         mutex_lock(&MonitorLock);
             value = count;
         mutex_unlock(&MonitorLock);
-        return  value;
+        return value;
     }
