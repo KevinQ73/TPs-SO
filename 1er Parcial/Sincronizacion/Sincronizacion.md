@@ -176,7 +176,6 @@ A diferencia del resto de las estrategias vistas, se puede implementar con o sin
 Esta biblioteca nos brinda los dos tipos de semáforos
 
 Con espera activa $=>$ pthreads_spinlock_t
-
 Con bloqueo $=>$ pthreads_mutex_t
 
 Como siempre priorizamos el buen uso de la CPU y no queremos desperdiciarlo con una espera activa, entonces... **¿Siempre es mejor usar la implementación con bloqueo?**
@@ -189,3 +188,167 @@ El proceso en espera activa continúa su ejecución más rápido, nos ahorramos 
 
 #### Tipos de Semáforos
 
+- **Mutex**: Permite solucionar el problema de la exclusión mutua, SIempre se inicializa en **1**
+- **Contadores**: Permite controlar el acceso a una cantidad de recursos. Se inicializa en $n$ (cantidad de instancias totales)
+- **Binarios**: Permite garantizar un orden de ejecución. Representa dos estados, libre u ocupado
+
+*La diferencia entre el mutex y el binario, es que el primero define una región de entrada y una de salida, y el binario se usa de forma alternada para que primero ejecute un proceso y luego otro*
+
+Si el valor de un semáforo es > 0 $=>$ Indica la cantidad de recursos disponibles de un semáforo contador
+
+Si el valor de un semáforo es < 0 $=>$ Indica la cantidad de procesos bloqueados esperando
+
+Entonces... ¿Puedo inicializar un semáforo con valor negativo?
+
+Respuesta corta: **NO**
+Respuesta larga: **No seas pelotudo, NO. Si lo haces sos un terrorista en potencia y mereces que te denuncien ante el FBI**
+
+**Usos**:
+- Mutua Exclusión
+- Ordenar ejecución
+- Limitar acceso a cantidad de instancias
+- Productor consumidor
+
+**Mutua Exclusión**
+
+Con `mutexVar = 1`
+
+**P1**
+
+    wait(mutexVar);
+
+    var++;
+
+    signal(mutexVar)
+
+
+**P2**
+
+    wait(mutexVar)
+
+    var--;
+
+    signal(mutexVar);
+
+
+**Ordenar ejecución**
+
+Con `semP1 = 1 // semP2 = 0`
+
+**P1**
+
+    while(1) {
+        wait(semP1);
+
+        printf(“MUCHAA”)
+
+        signal(semP2);
+    }
+
+**P2**
+
+    while(1) {
+        wait(semP2);
+
+        printf(“CHOOS”)
+
+        signal(semP1);
+    }
+
+**Limitar acceso a cantidad de instancias**
+
+Con `semContador = N -> cantidad total recursos`
+
+**P1**
+
+    wait(semContador);
+
+    usarRecurso();
+
+    signal(semContador)
+
+**P2**
+
+    wait(semContador)
+
+    usarRecurso();
+
+    signal(semContador);
+
+**Productor consumidor**
+
+Con `mutexLista = 1;   tareasPendientes = 0;  lugarEnLista = 20;`
+
+**P1 (CONSUMIDOR)**
+
+    while(1) {
+        wait(tareasPendientes);
+        wait(mutexLista);
+        tarea = obtenerTarea(listaTareas);
+        signal(mutexLista);
+        signal(lugarEnLista);
+     
+        ejecutarTarea(tarea);
+    }
+
+**P2 (PRODUCTOR)**
+
+    while(1) {
+
+        nuevaTarea = crearTarea();
+     
+        wait(lugarEnLista);
+        wait(mutexLista);
+        agregarTarea(nuevaTarea, listaTareas)
+        signal(mutexLista);
+        signal(tareasPendientes)
+
+    }
+
+### Inversión de prioridades
+
+Sean Procesos $P1$, $P2$, $P3$ .. cuyas prioridades son: $P1 < P2 < P3$
+
+$T = 0 => P1$ adquiere un recurso R WAIT(semM)
+$T = 1 => P3$ ingresa el sistema y necesita el recurso R, se bloquea en la espera
+$T = 2 => P2$ ingresa desaloja a $P1$ ya que tiene mayor prioridad
+
+$P3$, que es el proceso de mayor prioridad, no está pudiendo ejecutar porque espera un recurso retenido por P1, un proceso de menor prioridad
+
+### Monitores
+
+La idea de los monitores es la siguiente: supongamos que tenemos una variable global a la que acceden varios procesos y la modifican, ¿qué debe hacer cada proceso para que se asegure la mutua exclusión? usar un mutex. Hasta ahí vamos bien, pero... ¿existirá alguna forma de ahorrarnos tener que hacer wait y signal cada vez que el proceso quiera modificar dicha variable?
+
+La respuesta es SÍ y son los monitores
+
+- Es un mecanismo que provee mutua exclusión.
+- Abstrae en una estructura el acceso a sus datos.
+- Expone operaciones específicas para interactuar con la estructura de manera “segura” (thread-safe).
+
+**Ejemplo**:
+
+    #include <thread.h>
+    #include <synch.h>
+
+    static  int count;                     // the static counter
+    static  mutex_t MonitorLock;           // the static mutex lock
+
+    int INC(void)
+    {
+        int value;
+
+        mutex_lock(&MonitorLock);          // lock the monitor
+            value = (++count);             // increase and save counter
+        mutex_unlock(&MonitorLock);        // release the monitor
+        return  value;                     // return the new value
+    }
+
+    int GET(void)
+    {
+        int  value;
+
+        mutex_lock(&MonitorLock);
+            value = count;
+        mutex_unlock(&MonitorLock);
+        return  value;
+    }
