@@ -1,29 +1,29 @@
 # Planificación
 
 ## Índice
-- Definiciones varias
-- Tipos de planificadores
-    - Planificador de largo plazo
-    - Planificador de mediano plazo
-    - Planificador de corto plazo
-- Tipos de planificadores de Corto Plazo
-    - Criterios de replanificación
-    - Eventos de replanificación
-- Criterios de Algoritmos
-    - Orientados al usuario
-    - Orientados al sistema
-- Algoritmos para planificadores de corto plazo
-    - FIFO
-    - SJF/SRT (Shortest job first)/(Shortest remaining time first)
-        - SJF
-        - SRT
-        - SJR vs SJF
-        - Estimación de ráfaga
-    - Por Prioridades
-        - ¡Aging! 
-    - HRRN (Highest Response Ratio Next)
-    - Round Robin (RR)
-    - Virtual Round Robin
+- [Definiciones varias](#definiciones-varias)
+- [Tipos de planificadores](#tipos-de-planificadores)
+    - [Planificador de largo plazo](#planificador-de-largo-plazo)
+    - [Planificador de mediano plazo](#planificador-de-mediano-plazo)
+    - [Planificador de corto plazo](#planificador-de-corto-plazo)
+- [Tipos de planificadores de Corto Plazo](#tipos-de-planificadores-de-corto-plazo)
+    - [Criterios de replanificación](#criterios-de-replanificación)
+    - [Eventos de replanificación](#eventos-de-replanificación)
+- [Criterios de Algoritmos](#criterios-de-algoritmos)
+    - [Orientados al usuario](#orientados-al-usuario)
+    - [Orientados al sistema](#orientados-al-sistema)
+- [Algoritmos para planificadores de corto plazo](#algoritmos-para-planificadores-de-corto-plazo)
+    - [FIFO](#fifo)
+    - [SJF/SRT (Shortest job first)/(Shortest remaining time first)](#sjfsrt-shortest-job-firstshortest-remaining-time-first)
+        - [SJF](#sjf)
+        - [SRT](#srt)
+        - [SJR vs SJF](#sjr-vs-sjf)
+        - [Estimación de ráfaga](#estimación-de-ráfaga)
+    - [Por Prioridades](#por-prioridades)
+        - [¡Aging!](#aging)
+    - [HRRN (Highest Response Ratio Next)](#hrrn-highest-response-ratio-next)
+    - [Round Robin (RR)](#round-robin-rr)
+    - [Virtual Round Robin](#virtual-round-robin)
 
 ### Definiciones varias
 
