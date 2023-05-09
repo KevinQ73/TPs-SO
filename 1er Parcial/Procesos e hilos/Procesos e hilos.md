@@ -1,23 +1,23 @@
 # Procesos e Hilos
 ## Índice
 
- - **Procesos**
-	 - ¿Que es un proceso?
-	 - Composición de un proceso
-	 - PCB
-	 - Estados de un proceso
-     - Swapping
-     - Planificadores
-     - Cambio de contexto
-        - ¿Que se puede dar en un cambio de contexto?
-  - **Hilos**
-    - ¿Que es un hilo?
-    - TCB
-    - Diferencias con procesos
-    - KLT - ULT
-        - KLT
-        - ULT
-    - Dinamica de estados
+ - [**Procesos**](#procesos)
+	 - [¿Que es un proceso?](#que-es-un-proceso)
+	 - [Composición de un proceso](#composición-de-un-proceso)
+	 - [PCB](#pcb-process-control-block)
+	 - [Estados de un proceso](#estados-de-un-proceso)
+     - [Swapping](#swapping)
+     - [Planificadores](#planificadores)
+     - [Cambio de contexto](#cambio-de-contexto)
+        - [¿Que se puede dar en un cambio de contexto?](#que-se-puede-dar-en-un-cambio-de-contexto)
+- [**Hilos**](#hilos)
+    - [¿Que es un hilo?](#que-es-un-hilo)
+    - [TCB](#tcb-thread-control-block)
+    - [Diferencias con procesos](#diferencias-con-procesos)
+    - [KLT - ULT](#klt---ult)
+        - [KLT](#klt)
+        - [ULT](#ult)
+    - [Dinamica de estados](#dinamica-de-estados)
 
 ## Procesos
 Empecemos por lo más básico *¿Qué es un proceso?*. 
