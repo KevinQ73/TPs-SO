@@ -1,6 +1,18 @@
 # Sincronización
 
 ## Índice
+- [Condición de carrera](#condición-de-carrera)
+- [Región Crítica](#región-crítica)
+    - [¿Cuándo puedo tener una condición de carrera?](#cuándo-puedo-tener-una-condición-de-carrera)
+    - [¿Como tiene que ser la región crítica?](#como-tiene-que-ser-la-región-crítica)
+    - [Requerimientos para la solución al problema de la sección crítica](#requerimientos-para-la-solución-al-problema-de-la-sección-crítica)
+    - [Soluciones para las condiciones de carrera](#soluciones-para-las-condiciones-de-carrera)
+        - [Soluciones a nivel Hardware](#soluciones-a-nivel-hardware)
+- [Soluciones a nivel SO: Semáforos](#soluciones-a-nivel-so-semáforos)
+    - [PTHEREADS](#pthreads)
+    - [Tipos de Semáforos](#tipos-de-semáforos)
+- [Inversión de prioridades](#inversión-de-prioridades)
+- [Monitores](#monitores) 
 
 ### Condición de carrera
 
