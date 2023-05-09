@@ -1,6 +1,18 @@
 # Deadlock
 
 ## Índice
+
+- [Recursos del sistema](#recursos-del-sistema)
+- [Condiciones necesarias](#condiciones-necesarias)
+- [Tratamiento de Deadlocks a nivel SO](#tratamiento-de-deadlocks-a-nivel-so)
+    - [Prevención de Deadlocks](#prevención-de-deadlocks)
+    - [Evasión de Deadlocks](#evasión-de-deadlocks)
+    - [Detección y Recuperación de Deadlocks](#detección-y-recuperación-de-deadlocks)
+        - [Detección](#detección)
+        - [Recuperación](#recuperación)
+- [Resumen](#resumen)
+- [Livelock](#livelock)
+
 ### Recursos del sistema
 
 - Los sistemas poseen recursos limitados
