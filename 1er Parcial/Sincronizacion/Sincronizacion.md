@@ -310,7 +310,9 @@ Con `mutexLista = 1;   tareasPendientes = 0;  lugarEnLista = 20;`
 Sean Procesos $P1$, $P2$, $P3$ .. cuyas prioridades son: $P1 < P2 < P3$
 
 $T = 0 => P1$ adquiere un recurso R WAIT(semM)
+
 $T = 1 => P3$ ingresa el sistema y necesita el recurso R, se bloquea en la espera
+
 $T = 2 => P2$ ingresa desaloja a $P1$ ya que tiene mayor prioridad
 
 $P3$, que es el proceso de mayor prioridad, no está pudiendo ejecutar porque espera un recurso retenido por P1, un proceso de menor prioridad
