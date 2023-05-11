@@ -9,6 +9,7 @@ contexto, independientemente de qué se esté ejecutando.
 contexto
 
 **a.** F. Puedo estar atendiendo una interrupción y en ese momento que llegue otra y atenderla, por lo que no cambiaría de modo porque ya lo hice previamente.
+
 **b.** V. Las syscalls son realizadas por los procesos de usuario, por lo que las mismas deben cambiar a modo Kernel no solo para poder cambiar de contexto sino también porque normalmente las mismas terminan ejecutando instrucciones privilegiadas
 
 2. ¿Qué ventajas se podrían obtener de combinar KLTs con ULTs dentro de un mismo Proceso?
