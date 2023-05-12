@@ -233,6 +233,7 @@ Donde
 - $W$= Tiempo de espera en READY (wait time) 
 
 A mayor tiempo de espera $=>$ Mayor RR $=>$ Mayor prioridad
+
 A mayor duración de ráfaga $=>$ Menor RR $=>$ Menor prioridad
 
 - Es SIN DESALOJO, replanifica cuando:
