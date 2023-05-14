@@ -188,6 +188,7 @@ A diferencia del resto de las estrategias vistas, se puede implementar con o sin
 Esta biblioteca nos brinda los dos tipos de semáforos
 
 Con espera activa $=>$ pthreads_spinlock_t
+
 Con bloqueo $=>$ pthreads_mutex_t
 
 Como siempre priorizamos el buen uso de la CPU y no queremos desperdiciarlo con una espera activa, entonces... **¿Siempre es mejor usar la implementación con bloqueo?**
