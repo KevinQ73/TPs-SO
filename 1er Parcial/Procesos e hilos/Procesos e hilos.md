@@ -145,6 +145,13 @@ El cambio de contexto puede realizarse para:
 
 ### TCB (Thread Control Block)
 
+- TID
+- Puntero al stack del proceso
+- Program counter: Puntero a la actual instrucción del programa del hilo
+- Estado del hilo: (running, ready, waiting, start, terminated)
+- Valores de registro del hilo
+- Puntero al PCB en el que vive el hilo.
+
 Es lo mínimo que necesito para administrar los hilos
 
 ### Diferencias con procesos
