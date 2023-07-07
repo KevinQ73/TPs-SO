@@ -412,9 +412,10 @@ Cada bloque de punteros va a ser del mismo tamaño que el bloque de datos, que p
 
 Cuando usamos punteros directos por lo general vamos a querer apuntar a archivos pequeños. El sentido de usar punteros indirectos es para los momentos en donde queramos apuntar a archivos muy grandes.
 
-Para calcular el tamaño máximo de EXT 2, se usa esta cuenta
+Para calcular el tamaño máximo de EXT 2, se usa esta cuenta:
 
 $$PtrXBloque = TamBloque / TamPtr$$
+
 $$TamMax = PtrXBloque^{nivelDeIndirección} * TamBloque$$
 
 ### Estructura en EXT2
