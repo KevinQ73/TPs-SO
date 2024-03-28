@@ -1,6 +1,21 @@
 # Repaso De Arquitectura e Introducción a Sistemas Operativos
 
 ## Índice
+- [Repaso de Arquitectura de Computadores](#repaso-de-arquitectura-de-computadores)  
+    - [Componentes básicos de HW](#componentes-básicos-de-hw)
+    - [CPU](#cpu)
+        - [Funcionalidades de ciertos registros](#funcionalidades-de-ciertos-registros)
+            - [Program Counter (PC)](#program-counter-pc)
+            - [Instruction Register (IR)](#instruction-register-ir)
+            - [Memory Address Register (MAR)](#memory-address-register-mar)
+            - [Memory Buffer Register (MBR)](#memory-buffer-register-mbr)
+    - [Ciclo de una instrucción](#ciclo-de-una-instrucción)
+        - [¿Cómo funciona una interrupción?](#cómo-funciona-una-interrupción)
+        - [Interrupt Handler o Controlador de Interrupciones](#interrupt-handler-o-controlador-de-interrupciones)
+- [Introducción a los Sistemas Operativos](#introducción-a-los-sistemas-operativos)
+    - [¿Qué es un Sistema Operativo?](#qué-es-un-sistema-operativo)
+    - [Estructura](#estructura)
+    - [Seguridad en los SO](#seguridad-en-los-so)
 
 ### Repaso de Arquitectura de Computadores
 
