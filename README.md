@@ -19,8 +19,8 @@ Futuras updates.
 - Guardar ejercicios en carpetas junto con su respectivo markdown que resume el tema.
 
 ### Estructura de archivos deseada.
-
-``Repositorio
+```
+Repositorio
 ├── 1er parcial
 │   ├── ..
 │   └── Y tema
@@ -45,4 +45,5 @@ Futuras updates.
 │           ├── Ejercicio Z1.
 │           ├── ..
 │           └── Ejercicio Zn.
-└── TP0``
+└── TP0
+```
