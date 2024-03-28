@@ -21,8 +21,8 @@ Futuras updates.
 ### Estructura de archivos deseada.
 
 Repositorio
-``├── 1er parcial /n
-│   ├── ..
+``├── 1er parcial
+  │   ├── ..
 │   └── Y tema
 │       ├── img
 │       │   ├── Imagen1.png
