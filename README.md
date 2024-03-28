@@ -21,8 +21,8 @@ Futuras updates.
 ### Estructura de archivos deseada.
 
 Repositorio
-├── 1er parcial
-│   ├── ..
+```├── 1er parcial```
+```│   ├── ..```
 │   └── Y tema
 │       ├── img
 │       │   ├── Imagen1.png
@@ -45,23 +45,4 @@ Repositorio
 │           ├── Ejercicio Z1.
 │           ├── ..
 │           └── Ejercicio Zn.
-└── TP0
-
-├── src
-│   ├── controller
-│   │   ├── **/*.css
-│   ├── views
-│   ├── model
-│   ├── index.js
-├── public
-│   ├── css
-│   │   ├── **/*.css
-│   ├── images
-│   ├── js
-│   ├── index.html
-├── dist (or build
-├── node_modules
-├── package.json
-├── package-lock.json
-└── .gitignore
-
+└── TP0```
