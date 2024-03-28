@@ -3,7 +3,7 @@
 ## Resumen del material de estudio
 
 Primer Parcial (Sábado 17/05 2pm)
-- Introducción a los Sistemass Operativos y sus tipos.
+- Introducción a los Sistemas Operativos y sus tipos.
 - Procesos e Hilos
 - Planificación
 - Sincronización
