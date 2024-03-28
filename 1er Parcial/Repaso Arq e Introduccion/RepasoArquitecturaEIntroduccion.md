@@ -43,7 +43,7 @@ Es el encargado de leer y/o escribir la data desde o hacia la memoria RAM. Está
 
 Primero que nada. **¿Que es una instrucción?**. Es conjunto de datos insertados en una secuencia estructurada o específica que el procesador interpreta y ejecuta. 
 
-![Ciclo de una instrucción](/img/Imagen22.png)
+![Ciclo de una instrucción](./img/Imagen22.png)
 
 Ahora, sabiendo el flujo de una instrucción, podemos ver que hay algo llamado **Interrupciones**.
 
@@ -53,15 +53,15 @@ De estas, existen dos tipos de interrupciones:
 - **Enmascarables o de Software:** Son interrupciones el cual el SO puede decidir si atender o posponer a un futuro cercano su atención.
 - **No enmascarables o de Hardware:** Son de suma importancia y deben ser atendidas al momento en que llegan. 
 
-![Llegada de una interrupción](/img/Imagen23.png)
+![Llegada de una interrupción](./img/Imagen23.png)
 
 ##### ¿Cómo funciona una interrupción?
 
-![Como funciona una interrupción](/img/Imagen24.png)
+![Como funciona una interrupción](./img/Imagen24.png)
 
 ##### Interrupt Handler o Controlador de Interrupciones
 
-![Interrupt Handler](/img/Imagen25.png)
+![Interrupt Handler](./img/Imagen25.png)
 
 Una vez ocurrida una interrupción, el interrupt handler, a través del interrupt vector, buscará la rutina para atender la interrupción y ejecutarla hasta resolverla y volver al flujo original.
 
@@ -79,11 +79,11 @@ Diferentes definiciones, mismo sistema.
 
 #### Estructura
 
-![Estructura de un SO](/img/Imagen26.png)
+![Estructura de un SO](./img/Imagen26.png)
 
 Podemos también hacer un cuadro en el cual vemos para quienes están enfocados ciertos eslabones y que debería saber ese usuario para desarrollar uno de esos eslabones.
 
-![Usuarios finales de un SO](/img/Imagen27.png)
+![Usuarios finales de un SO](./img/Imagen27.png)
 
 #### Seguridad en los SO
 
@@ -98,7 +98,7 @@ El PSW (Program Status Word), es el que indica en que modo está ejecutandose.
 
 Si y no, puede hacer uso de una **syscall**, que es un mecanismo mediante el cual los programa solicitan servicios al SO.
 
-![Aros de seguridad](/img/Imagen28.png)
+![Aros de seguridad](./img/Imagen28.png)
 
 **Como cambiar de modo**
 
