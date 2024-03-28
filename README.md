@@ -1,3 +1,3 @@
-# Sistemas Operativos 1C 2023
+# Sistemas Operativos 1C 2024
 
 ## Resumen del material de estudio
