@@ -24,7 +24,7 @@ A su vez, los servidores pueden ser clientes de otros servidores. Esta jerarquí
 
 ### IPs y Puertos
 
-Lo más importante sobre este tema, sin ondar tan profundo en el tema, sabiendo que está el posteo en el [docs](https://docs.utnso.com.ar/guias/linux/sockets#ips-y-puertos-%C2%BFdonde-atraco-el-barco), es sobre que las IPs tienen una estructura 192.168.xxx.xxx donde xxx va de 0 a 256 y es único para cada dispositivo conectado a la red. 
+Lo más importante sobre este tema, sin ondar tan profundo en el tema, sabiendo que está el posteo en el [docs](!https://docs.utnso.com.ar/guias/linux/sockets#ips-y-puertos-%C2%BFdonde-atraco-el-barco), es sobre que las IPs tienen una estructura 192.168.xxx.xxx donde xxx va de 0 a 256 y es único para cada dispositivo conectado a la red. 
 
 De paso, tenemos los puertos, que son unidades lógicas, de las cuales el Sistema Operativo nos brinda 2^16 puertos (del 0 al 63535) de los cuales reserva los primeros 1000 para si mismo. Cuando desarrollemos, la comunicación entre los procesos debe ser en puertos que no se utilicen (porque dos procesos no pueden ocupar el mismo puerto al mismo tiempo), generalmente usaremos puertos mayores del ***35000 al 40000***.
 
