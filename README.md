@@ -2,6 +2,8 @@
 
 ## Resumen del material de estudio
 
+Resumenes armados de las cursadas presenciales del 1C 2023 con Leandro Carbajales y del 1C 2024 con Esteban Ignacio Masoero, con lo mejor de cada uno, para su disfrute.
+
 Primer Parcial (Sábado 17/05 2pm)
 - Introducción a los Sistemas Operativos y sus tipos.
 - Procesos e Hilos
