@@ -12,4 +12,4 @@ Primer Parcial (Sábado 17/05 2pm)
 Segundo Parcial (Sábado 06/07 2pm)
 - Memoria
 - File System
-- ¿Entrada y Salida? (El año pasado no entró en el examen, pero lo dieron igual)
+- ¿Entrada y Salida? (El año pasado no entró en el examen, pero lo dieron igual) [Falta resumen de este tema por ese motivo]
