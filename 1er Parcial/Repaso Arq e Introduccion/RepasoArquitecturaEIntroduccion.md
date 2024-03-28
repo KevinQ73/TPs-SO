@@ -6,7 +6,7 @@
 
 #### Componentes básicos de HW
 
-![Arquitectura de Von Neumman](/img/Imagen21.jpeg)
+![Arquitectura de Von Neumman](./img/Imagen21.jpeg)
 
 #### CPU
 
