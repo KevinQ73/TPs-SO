@@ -1,6 +1,11 @@
 # Guia Serialización para TP0 y TP
 
 ## Índice
+- [TAD](#tad)
+- [Stream](#stream)
+- [Serializar](#serializar)
+- [Estructuras Estáticas](#estructuras-estáticas)
+- [Estructuras Dinámicas](#estructuras-dinámicas)
 
 ### TAD
 
