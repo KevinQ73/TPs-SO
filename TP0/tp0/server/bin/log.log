@@ -1,0 +1,13 @@
+[INFO] 14:38:05:641 Servidor/(5324:5324): socket_servidor valor es : 4
+[INFO] 14:38:05:641 Servidor/(5324:5324): Servidor listo para recibir al cliente
+[INFO] 14:38:05:641 Servidor/(5324:5324): previo al accept
+[INFO] 14:38:57:557 Servidor/(5324:5324): Se hizo el accept
+[INFO] 14:38:57:557 Servidor/(5324:5324): Se aceptó un cliente!
+[INFO] 14:38:57:557 Servidor/(5324:5324): valor de cliente_fd: 5
+[INFO] 14:38:57:558 Servidor/(5324:5324): Me llego el mensaje valor
+[INFO] 14:39:15:299 Servidor/(5324:5324): Me llegaron los siguientes valores:
+
+[INFO] 14:39:15:299 Servidor/(5324:5324): messi
+[INFO] 14:39:15:299 Servidor/(5324:5324): 1234
+[INFO] 14:39:15:299 Servidor/(5324:5324): HOla
+[ERROR] 14:39:15:299 Servidor/(5324:5324): el cliente se desconecto. Terminando servidor
