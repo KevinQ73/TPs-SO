@@ -84,7 +84,7 @@ t_config* iniciar_config(void)
 	t_config* nuevo_config;
 
 	if ((nuevo_config = config_create("../cliente.config")) == NULL) { // <-- Como el cwd de linux es la propia carpeta de donde está el proceso, es necesario el ".."
-									   // Si querés que te ande en el VS, es solo un ".", o cambiar el cwd en el settings.mk
+									   // Si querés que te ande en el VS, es solo un ".", o cambiar el cwd en el settings.json
 		printf("No pude crear el config");
 		exit(2);
 	}
