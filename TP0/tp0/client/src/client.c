@@ -21,18 +21,24 @@ int main(void)
 
 	/* ---------------- ARCHIVOS DE CONFIGURACION ---------------- */
 
+	log_info(logger, "Iniciare la creacion del config");
+	
 	config = iniciar_config();
+
+	log_info(logger, "Se creó el Config");
 
 	// Usando el config creado previamente, leemos los valores del config y los 
 	// dejamos en las variables 'ip', 'puerto' y 'valor'
 
 	ip = config_get_string_value(config, "IP");
+	log_info(logger, "Se cargó la configuración con los valores: \n IP: %s", ip);
+
 	puerto = config_get_string_value(config, "PUERTO");
+	log_info(logger, "Se cargó la configuración con los valores: \n PUERTO: %s", puerto);
+
 	valor = config_get_string_value(config, "CLAVE");
 
-	// Loggeamos el valor de config
-
-	log_info(logger, "Se cargó la configuración con los valores: \n IP: %s \n PUERTO: %s \n CLAVE: %s", ip, puerto, valor);
+	log_info(logger, "Se cargó la configuración con los valores: \n CLAVE: %s", valor);
 
 	/* ---------------- LEER DE CONSOLA ---------------- */
 
@@ -73,10 +79,18 @@ t_log* iniciar_logger(void)
 
 t_config* iniciar_config(void)
 {
-	t_config* nuevo_config = config_create("cliente.config");
+	//t_config* nuevo_config = config_create("cliente.config");
+
+	t_config* nuevo_config;
+
+	if ((nuevo_config = config_create("./cliente.config")) == NULL) {
+		printf("No pude crear el config");
+		exit(2);
+	}
 
 	return nuevo_config;
 }
+
 
 void leer_consola(t_log* logger)
 {
