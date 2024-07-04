@@ -2,7 +2,7 @@
 
 ## Teoría
 
-1. Compare el esquema de permisos “Unix” (propietario/grupo/otros) con el esquema de ACL en términos de espacio en disco y granularidad de permisos. ¿Qué impacto tendría copiar un archivo de EXT2 a FAT32 en términos de permisos? ¿Qué sucedería al revés?
+1. [Compare el esquema de permisos “Unix” (propietario/grupo/otros) con el esquema de ACL en términos de espacio en disco y granularidad de permisos. ¿Qué impacto tendría copiar un archivo de EXT2 a FAT32 en términos de permisos? ¿Qué sucedería al revés?](#1)
 2. Compare en qué medida sufren cada tipo de fragmentación los esquemas de paginación y segmentación paginada.
 3. Indique si las afirmaciones son verdaderas o falsas, justificando en ambos casos:
    1. Es posible realizar un hardlink entre archivos de diferentes volúmenes, siempre y cuando ambos estén formateados con File Systems de tipo UNIX (ext2).
